@@ -40,7 +40,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (tree->l == NULL || tree->r == NULL)
 		return (0);
 	l = binary_tree_is_perfect(tree->l);
-	r = binary_tree_is_perfect(tree->r);
+	right = binary_tree_is_perfect(tree->r);
 	if (l == 0 || r == 0)
 		return (0);
 	if (binary_tree_height(tree->l) == binary_tree_height(tree->r))
